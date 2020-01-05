@@ -50,7 +50,7 @@ func ReadTempHumi(d string,a int)(float32,float32,error){
         h16:=int(b4[2])<<8 + int(b4[3])
         t=165.0*(float32(t16)/65536.0)-40.0
         h=(float32(h16)/65536)*100.0
-        log.Println("Temp=",t," Humidity=",h,"%")
+        //log.Println("Temp=",t," Humidity=",h,"%")
         break
       }
       time.Sleep(100 * time.Millisecond)
